@@ -5,13 +5,13 @@
 Following basic airflow topics are covered
 * Creating a DAG
 * Creating Tasks
-* passing arguments to a task
-* passing parameter between tasks
+* Passing arguments to a task
+* Passing parameter between tasks
 * Working with task parameters such as 
   * wait_for_downstream 
   * depend_on_past
 * Structuring the DAG using dagbag
-* Testing the DAGs
+* Testing the DAG
   * DAG validation test
   * DAG definition test
   
