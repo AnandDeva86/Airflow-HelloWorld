@@ -1,6 +1,4 @@
-# PUNK
-
-Airflow Hello world project.
+# Airflow Hello World
 
 ## Description
 
