@@ -1,7 +1,6 @@
 from airflow.operators.python_operator import PythonOperator
 from airflow import DAG
-
-from datetime import datetime, timedelta
+import airflow.utils.dates
 
 
 def first_function_execute():
@@ -16,16 +15,15 @@ def second_function_execute(**kwargs):
 
 default_args = {
     "owner": "Airflow",
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5),
-    "start_date": datetime(2022, 5, 5)  # 0, tzinfo = local_tz)
+    "start_date": airflow.utils.dates.days_ago(1)
+
 }
 info = {'key': 'Anand'}
 
 
 with DAG(
         dag_id='my_first_dag',
-        schedule_interval="*/1 * * * *",  # Executed every minute # 0 0 * * * Every day at midnight
+        schedule_interval="@once",  # Executed every minute # 0 0 * * * Every day at midnight
         default_args=default_args,
         catchup=False
 ) as dag:

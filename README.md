@@ -6,14 +6,21 @@ Following basic airflow topics are covered
 * Creating a DAG
 * Creating Tasks
 * Passing arguments to a task
-* Passing parameter between tasks
+* Passing value between tasks
 * Working with task parameters such as 
   * wait_for_downstream 
   * depend_on_past
+  * trigger_rule
+* SubDAG
+* Branching DAG
 * Structuring the DAG using dagbag
+* Trigger a DAG from another DAG using `TriggerDagRunOperator`
+* Pass value from a DAG to another DAG
+* Create dependency between DAGs using `ExternalTaskSensor`
 * Testing the DAG
   * DAG validation test
   * DAG definition test
+
   
 ### Dependencies
 
@@ -29,7 +36,7 @@ Following basic airflow topics are covered
 ```
 docker-compose up -d --build
 ```
-* Airlflow is hosted in [localhost](http://localhost:8080)
+* Airflow is hosted in [localhost](http://localhost:8080)
 * To create an interactive shell in a Docker Container
 ```
 docker exec -it <container_id> /entrypoint.sh bash
