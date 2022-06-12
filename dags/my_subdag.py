@@ -27,7 +27,7 @@ with DAG(dag_id=DAG_NAME,
                           )
     subdag_1 = SubDagOperator(task_id='subdags-1',
                               subdag=factory_subdag(DAG_NAME, 'subdags-1', default_args),
-                              executor= SequentialExecutor()  # to execute the task
+                              executor=SequentialExecutor()  # to execute the task
                               )
     check = BashOperator(task_id="check",
                          bash_command="echo 'middle of 2 subdag'"

@@ -6,14 +6,14 @@ Following basic airflow topics are covered
 * Creating a DAG
 * Creating Tasks
 * Passing arguments to a task
-* Passing value between tasks
+* Passing value between tasks using ``xcom``
 * Working with task parameters such as 
-  * wait_for_downstream 
-  * depend_on_past
-  * trigger_rule
-* SubDAG
-* Branching DAG
-* Structuring the DAG using dagbag
+  * ``wait_for_downstream`` 
+  * ``depend_on_past``
+  * ``trigger_rule``
+* SubDAG  using ``SubDagOperator``
+* Branching DAG using ``BranchPythonOperator``
+* Structuring the DAG using ``dagbag``
 * Trigger a DAG from another DAG using `TriggerDagRunOperator`
 * Pass value from a DAG to another DAG
 * Create dependency between DAGs using `ExternalTaskSensor`
